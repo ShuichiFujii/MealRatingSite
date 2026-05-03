@@ -152,16 +152,22 @@ class CategoryListViewTests(TestCase):
             typical_meal_time=1,
         )
 
+        # old meal を昔の日付に変更
         Meal.objects.filter(id=old_meal.id).update(
             date_added=timezone.now() - timedelta(days=100)
         )
 
         old_meal.refresh_from_db()
 
-        meals = _get_meals_by_category("recent")
+        meals = list(_get_meals_by_category("recent"))
 
         self.assertIn(recent_meal, meals)
-        self.assertNotIn(old_meal, meals)
+        self.assertIn(old_meal, meals)
+
+        self.assertLess(
+            meals.index(recent_meal),
+            meals.index(old_meal)
+        )
         
     def test_get_sorted_meals_by_rating(self):
         top_rated = Meal.objects.create(
