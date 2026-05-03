@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Ratings</title>
+    <link rel="stylesheet" href="{% static 'meal/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'landing' %}">Meal<span>Ratings</span></a></h1>
+
+        <nav>
+            <a href="{% url 'category_list' 'morning' %}">Morning</a>
+            <a href="{% url 'category_list' 'afternoon' %}">Afternoon</a>
+            <a href="{% url 'category_list' 'evening' %}">Evening</a>
+            <a href="{% url 'category_list' 'recent' %}">Recently Added</a>
+            <a href="{% url 'category_list' 'top_rated' %}">Top Rated</a>
+            <a href="{% url 'landing' %}#add-meal">Add Meal</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Show More/Less functionality
+        const showMoreBtns = document.querySelectorAll('.show-more-btn');
+        
+        showMoreBtns.forEach(function(btn) {
+            const targetId = btn.getAttribute('data-target');
+            const grid = document.getElementById(targetId);
+            
+            if (grid) {
+                // Initially collapse the grid
+                grid.classList.add('collapsed');
+                
+                btn.addEventListener('click', function() {
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    
+                    if (isExpanded) {
+                        grid.classList.add('collapsed');
+                        btn.setAttribute('aria-expanded', 'false');
+                    } else {
+                        grid.classList.remove('collapsed');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html>

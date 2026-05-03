@@ -1,0 +1,58 @@
+{% extends "meal/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>Meal Ratings</h1>
+
+{% for section in sections %}
+<section class="home-section" data-category="{{ section.category }}">
+
+    <div class="section-header">
+        <a class="section-title-link" href="{% url 'category_list' section.category %}">
+            <h2 class="section-title">{{ section.label }}</h2>
+        </a>
+        <div class="section-nav">
+            <button class="section-nav-btn prev" aria-label="Previous" disabled>&#8249;</button>
+            <span class="section-nav-indicator"></span>
+            <button class="section-nav-btn next" aria-label="Next">&#8250;</button>
+            <a class="section-view-all" href="{% url 'category_list' section.category %}">View all →</a>
+        </div>
+    </div>
+
+    <div class="meal-grid section-grid">
+        {% for meal in section.meals %}
+        <a class="meal-card" href="{% url 'meal_detail' meal.id %}">
+            {% if meal.has_image %}
+                <img src="{{ meal.image.url }}" alt="{{ meal.name }}">
+            {% else %}
+                <div class="meal-card-no-image">No image</div>
+            {% endif %}
+            <div class="meal-card-body">
+                <h3>{{ meal.name }}</h3>
+                <p>Rating: {{ meal.average_rating|floatformat:1 }}</p>
+            </div>
+        </a>
+        {% empty %}
+        <p class="section-empty">No meals yet.</p>
+        {% endfor %}
+    </div>
+</section>
+
+{% endfor %}
+
+<section id="add-meal" class="meal-form-card">
+    <h2>Add a new meal</h2>
+    <form method="post" class="meal-form" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ meal_form.as_p }}
+        <button type="submit" class="rating-submit-btn">Submit Meal</button>
+    </form>
+</section>
+
+<script>
+const SECTION_DATA = {{ section_data_json|safe }};
+</script>
+<script src="{% static 'meal/js/home.js' %}"></script>
+
+{% endblock %}

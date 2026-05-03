@@ -1,0 +1,79 @@
+{% extends "meal/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% if meal_detail.image %}
+    <img class="meal-detail-img" src="{{ meal_detail.image.url }}" alt="{{ meal_detail.name }}">
+{% else %}
+    <div class="meal-detail-no-image">No image available</div>
+{% endif %}
+
+<div class="meal-detail-info">
+    <h1>{{ meal_detail.name }}</h1>
+    <p>{{ meal_detail.description }}</p>
+    <p>Country: {{ meal_detail.country_of_origin }}</p>
+    <p>Rating: {{ meal_detail.average_rating|floatformat:1 }} &nbsp;·&nbsp; {{ meal_detail.number_of_votes }} votes</p>
+</div>
+
+<section class="rating-form-card">
+    <h2>Rate this meal</h2>
+
+    <form method="post" class="rating-form" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-field">
+            <label for="{{ form.rating.id_for_label }}">Your rating</label>
+            {{ form.rating }}
+
+            {% if form.rating.errors %}
+                <div class="form-error">
+                    {{ form.rating.errors }}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.comment.id_for_label }}">Your comment (optional)</label>
+            {{ form.comment }}
+
+            {% if form.comment.errors %}
+                <div class="form-error">
+                    {{ form.comment.errors }}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.image.id_for_label }}">Upload an image (optional)</label>
+            {{ form.image }}
+
+            {% if form.image.errors %}
+                <div class="form-error">
+                    {{ form.image.errors }}
+                </div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="rating-submit-btn">
+            Submit Rating
+        </button>
+    </form>
+</section>
+
+<h2>Ratings</h2>
+<div class="reviews-section">
+{% for rating in meal_detail.ratings.all %}
+    <div class="review-card">
+        <p>{{ rating.rating|floatformat:1 }}</p>
+        <p>{{ rating.comment }}</p>
+        {% if rating.image %}
+            <img src="{{ rating.image.url }}" alt="Review photo" class="review-photo">
+        {% endif %}
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
+
+

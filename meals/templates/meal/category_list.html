@@ -1,0 +1,76 @@
+{% extends "meal/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="category-header">
+    <h1>{{ category|capfirst }}</h1>
+    <div class="sort-links">
+        <span>Sort:</span>
+        <a href="?sort=recent" class="{% if current_sort == 'recent' %}active{% endif %}">Recently Added</a>
+        <a href="?sort=rating" class="{% if current_sort == 'rating' %}active{% endif %}">Top Rated</a>
+        <a href="?sort=country" class="{% if current_sort == 'country' %}active{% endif %}">Country</a>
+    </div>
+</div>
+
+<div class="meal-grid">
+{% for meal in meals %}
+    <a class="meal-card" href="{% url 'meal_detail' meal.id %}">
+        {% if meal.has_image %}
+            <img src="{{ meal.image.url }}" alt="{{ meal.name }}">
+        {% else %}
+            <div class="meal-card-no-image">No image</div>
+        {% endif %}
+        <div class="meal-card-body">
+            <h3>{{ meal.name }}</h3>
+            <p>{{ meal.description }}</p>
+            <p>Country: {{ meal.country_of_origin }}</p>
+            <p>Rating: {{ meal.average_rating|floatformat:1 }}</p>
+            <p>Votes: {{ meal.number_of_votes }}</p>
+        </div>
+    </a>
+{% empty %}
+    <p class="section-empty">No meals found.</p>
+{% endfor %}
+</div>
+
+{# ── Pagination ── #}
+{% if page_obj.paginator.num_pages > 1 %}
+<nav class="pagination" aria-label="Page navigation">
+
+    {# Previous #}
+    {% if page_obj.has_previous %}
+        <a class="page-btn page-prev" href="?page={{ page_obj.previous_page_number }}{% if current_sort %}&sort={{ current_sort }}{% endif %}" aria-label="Previous page">
+            &#8249;
+        </a>
+    {% else %}
+        <span class="page-btn page-prev disabled" aria-disabled="true">&#8249;</span>
+    {% endif %}
+
+    {# 番号 #}
+    <div class="page-numbers">
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+                <span class="page-num current" aria-current="page">{{ num }}</span>
+            {% elif num == 1 or num == page_obj.paginator.num_pages %}
+                <a class="page-num" href="?page={{ num }}{% if current_sort %}&sort={{ current_sort }}{% endif %}">{{ num }}</a>
+            {% elif num >= page_obj.number|add:"-2" and num <= page_obj.number|add:"2" %}
+                <a class="page-num" href="?page={{ num }}{% if current_sort %}&sort={{ current_sort }}{% endif %}">{{ num }}</a>
+            {% elif num == page_obj.number|add:"-3" or num == page_obj.number|add:"3" %}
+                <span class="page-ellipsis">…</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {# Next #}
+    {% if page_obj.has_next %}
+        <a class="page-btn page-next" href="?page={{ page_obj.next_page_number }}{% if current_sort %}&sort={{ current_sort }}{% endif %}" aria-label="Next page">
+            &#8250;
+        </a>
+    {% else %}
+        <span class="page-btn page-next disabled" aria-disabled="true">&#8250;</span>
+    {% endif %}
+
+</nav>
+{% endif %}
+
+{% endblock %}
