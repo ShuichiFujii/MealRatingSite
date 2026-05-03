@@ -1,6 +1,6 @@
 [
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":1, 
 		"fields" : 
 			{
@@ -13,7 +13,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":2, 
 		"fields" : 
 			{
@@ -26,7 +26,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":3, 
 		"fields" : 
 			{
@@ -39,7 +39,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":4, 
 		"fields" : 
 			{
@@ -52,7 +52,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":5, 
 		"fields" : 
 			{
@@ -65,7 +65,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":6, 
 		"fields" : 
 			{
@@ -78,7 +78,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":7, 
 		"fields" : 
 			{
@@ -91,7 +91,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":8, 
 		"fields" : 
 			{
@@ -104,7 +104,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":9, 
 		"fields" : 
 			{
@@ -118,7 +118,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":10, 
 		"fields" : 
 			{
@@ -131,7 +131,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":11, 
 		"fields" : 
 			{
@@ -144,7 +144,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":12, 
 		"fields" : 
 			{
@@ -157,7 +157,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":13, 
 		"fields" : 
 			{
@@ -170,7 +170,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":14, 
 		"fields" : 
 			{
@@ -183,7 +183,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":15, 
 		"fields" : 
 			{
@@ -196,7 +196,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":16, 
 		"fields" : 
 			{
@@ -209,7 +209,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":17, 
 		"fields" : 
 			{
@@ -222,7 +222,7 @@
 			}
 	},
 	{
-		"model": "meal_ratings.meal",
+		"model": "meals.meal",
 		"pk":18, 
 		"fields" : 
 			{
@@ -235,7 +235,7 @@
 			}
 	},
 	{
-	      "model": "meal_ratings.mealrating",
+	      "model": "meals.mealrating",
               "fields": {
                      "meal": 1,
                      "rating": 4.99,
@@ -243,7 +243,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 1,
                      "rating": 1.02,
@@ -251,7 +251,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 1,
                      "rating": 1.86,
@@ -259,7 +259,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 1,
                      "rating": 4.42,
@@ -267,7 +267,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 2,
                      "rating": 2.88,
@@ -275,7 +275,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 2,
                      "rating": 3.95,
@@ -283,7 +283,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 2,
                      "rating": 4.51,
@@ -291,7 +291,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 2,
                      "rating": 1.6,
@@ -299,7 +299,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 3,
                      "rating": 2.05,
@@ -307,7 +307,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 3,
                      "rating": 0.26,
@@ -315,7 +315,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 3,
                      "rating": 2.09,
@@ -323,7 +323,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 3,
                      "rating": 3.88,
@@ -331,7 +331,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 4,
                      "rating": 4.32,
@@ -339,7 +339,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 4,
                      "rating": 1.31,
@@ -347,7 +347,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 4,
                      "rating": 4.59,
@@ -355,7 +355,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 4,
                      "rating": 4.01,
@@ -363,7 +363,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 5,
                      "rating": 0.71,
@@ -371,7 +371,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 5,
                      "rating": 1.0,
@@ -379,7 +379,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 5,
                      "rating": 0.66,
@@ -387,7 +387,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 5,
                      "rating": 1.34,
@@ -395,7 +395,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 6,
                      "rating": 4.63,
@@ -403,7 +403,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 6,
                      "rating": 0.63,
@@ -411,7 +411,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 6,
                      "rating": 4.06,
@@ -419,7 +419,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 6,
                      "rating": 0.59,
@@ -427,7 +427,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 7,
                      "rating": 3.23,
@@ -435,7 +435,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 7,
                      "rating": 1.75,
@@ -443,7 +443,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 7,
                      "rating": 2.88,
@@ -451,7 +451,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 7,
                      "rating": 0.37,
@@ -459,7 +459,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 8,
                      "rating": 4.04,
@@ -467,7 +467,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 8,
                      "rating": 4.44,
@@ -475,7 +475,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 8,
                      "rating": 0.75,
@@ -483,7 +483,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 8,
                      "rating": 0.78,
@@ -491,7 +491,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 9,
                      "rating": 1.03,
@@ -499,7 +499,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 9,
                      "rating": 1.81,
@@ -507,7 +507,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 9,
                      "rating": 3.43,
@@ -515,7 +515,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 9,
                      "rating": 4.37,
@@ -523,7 +523,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 10,
                      "rating": 3.94,
@@ -531,7 +531,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 10,
                      "rating": 4.52,
@@ -539,7 +539,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 10,
                      "rating": 4.12,
@@ -547,7 +547,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 10,
                      "rating": 2.1,
@@ -555,7 +555,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 11,
                      "rating": 1.46,
@@ -563,7 +563,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 11,
                      "rating": 3.6,
@@ -571,7 +571,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 11,
                      "rating": 1.83,
@@ -579,7 +579,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 11,
                      "rating": 1.62,
@@ -587,7 +587,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 12,
                      "rating": 3.99,
@@ -595,7 +595,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 12,
                      "rating": 0.92,
@@ -603,7 +603,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 12,
                      "rating": 3.29,
@@ -611,7 +611,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 12,
                      "rating": 0.43,
@@ -619,7 +619,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 13,
                      "rating": 4.9,
@@ -627,7 +627,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 13,
                      "rating": 2.1,
@@ -635,7 +635,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 13,
                      "rating": 2.75,
@@ -643,7 +643,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 13,
                      "rating": 4.18,
@@ -651,7 +651,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 14,
                      "rating": 4.88,
@@ -659,7 +659,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 14,
                      "rating": 1.29,
@@ -667,7 +667,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 14,
                      "rating": 4.1,
@@ -675,7 +675,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 14,
                      "rating": 2.72,
@@ -683,7 +683,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 15,
                      "rating": 0.42,
@@ -691,7 +691,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 15,
                      "rating": 4.59,
@@ -699,7 +699,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 15,
                      "rating": 0.19,
@@ -707,7 +707,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 15,
                      "rating": 1.15,
@@ -715,7 +715,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 16,
                      "rating": 3.44,
@@ -723,7 +723,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 16,
                      "rating": 3.43,
@@ -731,7 +731,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 16,
                      "rating": 0.15,
@@ -739,7 +739,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 16,
                      "rating": 4.41,
@@ -747,7 +747,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 17,
                      "rating": 3.13,
@@ -755,7 +755,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 17,
                      "rating": 4.61,
@@ -763,7 +763,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 17,
                      "rating": 3.14,
@@ -771,7 +771,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 17,
                      "rating": 2.88,
@@ -779,7 +779,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 18,
                      "rating": 0.55,
@@ -787,7 +787,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 18,
                      "rating": 2.37,
@@ -795,7 +795,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 18,
                      "rating": 1.54,
@@ -803,7 +803,7 @@
               }
        },
        {
-              "model": "meal_ratings.mealrating",
+              "model": "meals.mealrating",
               "fields": {
                      "meal": 18,
                      "rating": 0.67,
