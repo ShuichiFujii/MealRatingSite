@@ -112,11 +112,12 @@ CI
 
 Windows 環境では、以下の補助スクリプトを利用できます。
 
-| Script | Description |
+| Command | Description |
 |---|---|
-| `setup.bat` | 仮想環境作成、依存関係インストール、マイグレーションを実行 |
-| `run.bat` | 開発サーバーを起動 |
-| `test.bat` | Django のテストを実行 |
+| `run setup` | 仮想環境作成、依存関係インストール、マイグレーションを実行 |
+| `run server` | 開発サーバーを起動 |
+| `run test` | Django のテストを実行 |
+| `run migrate` | マイグレーションを作成・適用 |
 
 ## Usage
 
