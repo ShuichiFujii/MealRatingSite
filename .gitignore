@@ -4,6 +4,7 @@ __pycache__/
 db.sqlite3
 *.sqlite3
 .env
+.vscode/
 
 media/*
 !media/sample_images/
