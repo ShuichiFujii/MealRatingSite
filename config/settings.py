@@ -17,15 +17,22 @@ from dotenv import load_dotenv
 # .envファイルを読み込む
 load_dotenv()
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-development-key-replace-this')
 
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+if DEBUG:
+    SECRET_KEY = os.getenv(
+        'DJANGO_SECRET_KEY',
+        'django-insecure-development-key-replace-this'
+    )
+else:
+    SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
+ALLOWED_HOSTS = os.getenv(
+    'DJANGO_ALLOWED_HOSTS',
+    '127.0.0.1,localhost'
+).split(',')
 
 # Application definition
 
