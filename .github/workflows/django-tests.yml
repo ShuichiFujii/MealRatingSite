@@ -25,5 +25,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
+        env:
+          DJANGO_SECRET_KEY: django-insecure-ci-test-secret-key
+          DJANGO_DEBUG: "False"
+          DJANGO_ALLOWED_HOSTS: 127.0.0.1,localhost
         run: |
           python manage.py test
