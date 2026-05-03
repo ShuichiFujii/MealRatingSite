@@ -11,7 +11,11 @@ if "%1"=="setup" (
     call .venv\Scripts\activate.bat
 
     python -m pip install --upgrade pip
+    echo.
     pip install -r requirements.txt
+    echo.
+    python generate_secretkey_setting.py
+    echo.
     python manage.py migrate
 
     echo.
