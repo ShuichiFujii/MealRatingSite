@@ -2,8 +2,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Meal
 from .forms import MealRatingForm, MealForm
 from django.core.paginator import Paginator
-from datetime import timezone, timedelta
-from django.utils import timezone
 import json
     
 def _meal_to_dict(meal):
@@ -71,10 +69,7 @@ def _get_meals_by_category(category):
         ).order_by("-average_rating")
 
     elif category == "recent":
-        now = timezone.now()
-        return Meal.objects.filter(
-            date_added__gte=now - timedelta(days=90)
-        ).order_by("-date_added")
+        return Meal.objects.order_by("-date_added")
 
     elif category == "top_rated":
         return Meal.objects.filter(
